@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Layout, Menu, Icon, Input, Carousel, Tabs, Button} from 'antd';
 import './Home-HeaderPart.css';
+import ExplainPart from './Home-ExplainPart.js';
+import RecommendPart from './Home-RecommendPart.js';
+import UpdatePart from './Home-UpdatePart.js';
 const { Header, Content, Sider, } = Layout;
 const Search = Input.Search;
 const SubMenu = Menu.SubMenu;
@@ -97,6 +100,9 @@ class HeaderPart extends Component {
 					</Tabs>
 				</Sider>
 	      	</Layout>
+	    	<RecommendPart />
+	      	<UpdatePart />
+	      	<ExplainPart />
       </Layout>
     );
   }
