@@ -8,7 +8,4 @@ import ExplainPart from './Home-ExplainPart';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<HeaderPart />, document.getElementById('header'));
-ReactDOM.render(<RecommendPart />, document.getElementById('recommendContent'));
-ReactDOM.render(<UpdatePart />, document.getElementById('updateContent'));
-ReactDOM.render(<ExplainPart />, document.getElementById('explainContent'));
 registerServiceWorker();
