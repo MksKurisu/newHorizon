@@ -12,7 +12,7 @@ class UpdatePart extends Component{
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
-						    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+						    cover={<img alt="example" src={require("./pic/123.png")} />}>
 						    <Meta
 						      title="爱莲说"
 						      description="经典诗词串讲"/>
@@ -24,7 +24,7 @@ class UpdatePart extends Component{
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
-						    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+						    cover={<img alt="example" src={require("./pic/123.png")} />}>
 						    <Meta
 						      title="爱莲说"
 						      description="经典诗词串讲"/>
@@ -36,7 +36,7 @@ class UpdatePart extends Component{
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
-						    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+						    cover={<img alt="example" src={require("./pic/123.png")} />}>
 						    <Meta
 						      title="爱莲说"
 						      description="经典诗词串讲"/>
@@ -48,7 +48,7 @@ class UpdatePart extends Component{
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
-						    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+						    cover={<img alt="example" src={require("./pic/123.png")} />}>
 						    <Meta
 						      title="爱莲说"
 						      description="经典诗词串讲"/>
