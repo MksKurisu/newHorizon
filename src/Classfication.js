@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Layout, Menu, Icon, Input, Carousel, Button, List, Row, Col, Checkbox, Card} from 'antd';
+import {Layout, Menu, Icon, Input, Button, List, Row, Col, Checkbox, Card} from 'antd';
 import { Link } from 'react-router-dom';
 import './Classfication.css'
 import './HomePage.css'
@@ -88,7 +88,19 @@ class Classfication extends Component {
 		    		<Checkbox className="checkBox">免费课程</Checkbox>
 		    	</div>
 		    	<div className="classCard">
-		    		<div className="cardContent">
+		    		<div className="classCardContent">
+						<Link to='./classDetail'><Card
+						    hoverable
+						    style={{ width: 250 }}
+						    cover={<img alt="example" src={require("./pic/123.png")} />}>
+						    <Meta
+						      title="爱莲说"
+						      description="经典诗词串讲"/>
+						    <Meta
+						      description="基础诗词	七年级		免费"/>
+						</Card></Link>
+					</div>
+					<div className="classCardContent">
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
@@ -100,7 +112,7 @@ class Classfication extends Component {
 						      description="基础诗词	七年级		免费"/>
 						</Card>
 					</div>
-					<div className="cardContent">
+					<div className="classCardContent">
 						<Card
 						    hoverable
 						    style={{ width: 250 }}
@@ -112,19 +124,7 @@ class Classfication extends Component {
 						      description="基础诗词	七年级		免费"/>
 						</Card>
 					</div>
-					<div className="cardContent">
-						<Card
-						    hoverable
-						    style={{ width: 250 }}
-						    cover={<img alt="example" src={require("./pic/123.png")} />}>
-						    <Meta
-						      title="爱莲说"
-						      description="经典诗词串讲"/>
-						    <Meta
-						      description="基础诗词	七年级		免费"/>
-						</Card>
-					</div>
-					<div className="cardContent">
+					<div className="classCardContent">
 						<Card
 						    hoverable
 						    style={{ width: 250 }}

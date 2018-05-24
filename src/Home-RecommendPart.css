@@ -5,8 +5,8 @@
 	background: white;
 	box-sizing: border-box;
 	font-size:  medium;
-	border-top: solid 1px black;
-	border-bottom: solid 1px black;
+	border-top: solid 1px gainsboro;
+	border-bottom: solid 1px gainsboro;
 }
 
 .cardRecommend{

@@ -10,7 +10,7 @@ class RecommendPart extends Component{
 				<div className="title">精品推荐</div>
 				<div className="cardRecommend">
 					<div className="cardContent">
-						<Link to='/classfication'><Card
+						<Link to='./classDetail'><Card
 						    hoverable
 						    style={{ width: 250 }}
 						    cover={<img alt="example" src={require("./pic/123.png")} />}>

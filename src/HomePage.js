@@ -63,7 +63,7 @@ class HomePage extends Component {
 		        style={{ background: '#fff' }}>
 			        <Menu onClick={this.handleClick} style={{ width: 200 }} mode="vertical" className="verticalContainer">
 					    <SubMenu key="sub1" title={<span><Icon type="mail" className="verticalContain" /><span>Navigation One</span></span>}>
-					      	<Menu.Item key="1">Option 1</Menu.Item>
+					      	<Menu.Item key="1"><Link to='/classfication'>Option 1</Link></Menu.Item>
 					        <Menu.Item key="2">Option 2</Menu.Item>
 					        <Menu.Item key="3">Option 3</Menu.Item>
 					    </SubMenu>

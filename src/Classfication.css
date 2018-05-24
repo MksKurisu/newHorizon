@@ -57,7 +57,10 @@
 	margin-top: 25px;
 }
 
-.cardContent{
+.classCardContent{
 	width: 330px;
 	box-sizing: border-box;
+	float: left;
+	padding-left: 60px;
+	
 }

@@ -1,0 +1,58 @@
+.infoContent{
+	background: white;
+}
+
+.classInfo{
+	width: 1400px;
+	height: 340px;
+	margin: auto;
+	background: white;
+}
+
+#classPic{
+	float: left;
+	margin-right: 35px;
+}
+
+#classMes{
+	font-size: larger;
+	font-weight: bold;
+}
+
+#study{
+	float: right;
+}
+
+.Introduction{
+	width: 1350px;
+	margin: auto;
+}
+
+.classIntroduction{
+	width: 925px;
+	height: 320px;
+	margin: auto;
+	float: left;
+}
+
+.teacher{
+	width: 400px;
+	height: 320px;
+	background: white;
+	float: right;
+}
+
+h2{
+	font-weight: bold;
+}
+
+.catalogue{
+	float: left;
+	width: 925px;
+}
+
+.teacherInfo{
+	width: 320px;
+	float: left;
+	margin-left: 25px;
+}
