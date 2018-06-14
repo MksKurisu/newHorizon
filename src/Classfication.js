@@ -25,7 +25,7 @@ class Classfication extends Component {
     return (
     	<Layout>
     		<Header className="headerContainer">
-    			<div className="logo" />
+    		  <Link to='./home'><div className="logo" /></Link>
 		      <Menu
 		        onClick={this.handleClick}
 		        mode="horizontal"
@@ -47,7 +47,7 @@ class Classfication extends Component {
 		          <Icon type="search" />关于我们
 		        </Menu.Item>
 		        <Search placeholder="input search text" enterButton className="searcher"/>
-		        <div className="shopper"><Button type="primary" className="shopperContainer" shape="circle" >购物车</Button></div>
+		        <div className="shopper"><Link to='/Shop'><Button type="primary" className="shopperContainer" shape="circle" >购物车</Button></Link></div>
 		        <div className="alarm"><Button  shape="circle" className="alarmContainer" type="primary"><Icon type="notification" style={{fontSize:26}} /></Button></div>
 		      </Menu>
 		    </Header>
