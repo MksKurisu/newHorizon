@@ -4,7 +4,7 @@
 
 .classInfo{
 	width: 1400px;
-	height: 340px;
+	height: 500px;
 	margin: auto;
 	background: white;
 }
@@ -12,6 +12,18 @@
 #classPic{
 	float: left;
 	margin-right: 35px;
+}
+
+#detailList{
+	width: 1000px;
+	height: auto;
+	float: left;
+}
+
+.detailContent{
+	float: left;
+	height: 60px;
+	padding-top: 15px;
 }
 
 #classMes{

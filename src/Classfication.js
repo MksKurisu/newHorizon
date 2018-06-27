@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Layout, Menu, Icon, Input, Button, List, Row, Col, Checkbox, Card} from 'antd';
 import { Link } from 'react-router-dom';
+import { queryLessons } from './server'
+import CardList from './CardList'
+import './CardList.css';
 import './Classfication.css'
 import './HomePage.css'
 const { Header, Content, Sider, } = Layout;
@@ -9,7 +12,22 @@ const ButtonGroup = Button.Group;
 const Item = Menu.Item;
 const { Meta } = Card;
 class Classfication extends Component {
+	state = {
+		lessons:[]
+	}
 	
+	componentDidMount() {
+    var that = this;
+    that.getJsonData();
+   }
+	
+	getJsonData = () => {
+    queryLessons().then(res => {
+      this.setState({lessons:res})
+      console.log(res)
+    });
+  	};
+  	
 	handleClick = (e) => {
     console.log('click ', e);
     this.setState({
@@ -88,54 +106,7 @@ class Classfication extends Component {
 		    		<Checkbox className="checkBox">免费课程</Checkbox>
 		    	</div>
 		    	<div className="classCard">
-		    		<div className="classCardContent">
-						<Link to='./classDetail'><Card
-						    hoverable
-						    style={{ width: 250 }}
-						    cover={<img alt="example" src={require("./pic/123.png")} />}>
-						    <Meta
-						      title="爱莲说"
-						      description="经典诗词串讲"/>
-						    <Meta
-						      description="基础诗词	七年级		免费"/>
-						</Card></Link>
-					</div>
-					<div className="classCardContent">
-						<Card
-						    hoverable
-						    style={{ width: 250 }}
-						    cover={<img alt="example" src={require("./pic/123.png")} />}>
-						    <Meta
-						      title="爱莲说"
-						      description="经典诗词串讲"/>
-						    <Meta
-						      description="基础诗词	七年级		免费"/>
-						</Card>
-					</div>
-					<div className="classCardContent">
-						<Card
-						    hoverable
-						    style={{ width: 250 }}
-						    cover={<img alt="example" src={require("./pic/123.png")} />}>
-						    <Meta
-						      title="爱莲说"
-						      description="经典诗词串讲"/>
-						    <Meta
-						      description="基础诗词	七年级		免费"/>
-						</Card>
-					</div>
-					<div className="classCardContent">
-						<Card
-						    hoverable
-						    style={{ width: 250 }}
-						    cover={<img alt="example" src={require("./pic/123.png")} />}>
-						    <Meta
-						      title="爱莲说"
-						      description="经典诗词串讲"/>
-						    <Meta
-						      description="基础诗词	七年级		免费"/>
-						</Card>
-					</div>
+					<CardList imagecard = {this.state.lessons} />		
 		    	</div>
 		    </Content>
 		</Layout>

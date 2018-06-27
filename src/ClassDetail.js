@@ -1,30 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, propsType } from 'react';
 import {Layout, Menu, Icon, Input, Tabs, Button, List, Divider, Avatar, Steps} from 'antd';
 import { Link } from 'react-router-dom';
+import { axios } from 'axios'
 import './HomePage.css';
 import './ClassDetail.css'
 const { Header, Content, Sider, } = Layout;
 const Search = Input.Search;
 const SubMenu = Menu.SubMenu;
 const Step = Steps.Step;
-const data1 = [
-	'价格：   免费',
-	'年级：   初一',
-	'人数：    300',
-	'时长：   2小时',
-];
-	
+
 const data2 = [
-	{
-    	title: 'Teacher 1',
-    	description: 'Label1',
-	},
-	{
-	    title: 'Teacher 1',
-	    description: 'Label1',
-	},
-];
-	
+{
+	title: 'Teacher1',
+	description: 'description1'
+},{title: 'Teacher2',
+	description: 'description2'
+}];
+
 class classDetail extends Component {
 	handleClick = (e) => {
     console.log('click ', e);
@@ -37,6 +29,7 @@ class classDetail extends Component {
   console.log(key);
   }
   	render(){
+  		console.log(this.props.location.data)
   		return(
 		  	<Layout>
 				<Header>
@@ -69,17 +62,24 @@ class classDetail extends Component {
 				<Content className="infoContent">
 					<div className="classInfo">
 						<h1>课程名称</h1>
-						<img alt="pic loading error" src={require("./pic/123.png")} id="classPic" />
-						<List
-					      size="large"
-					      dataSource={data1}
-					      renderItem={item => (<List.Item>{item}</List.Item>)} id="classMes" />
-					      <Link to='./Media'><Button type="primary" size="large" id="study">开始学习</Button></Link>
+						<img alt="pic loading error" src={this.props.location.data.image} id="classPic" />
+						<div id="detailList">
+							<div className="detailContent"><h2>价格:  {this.props.location.data.price}</h2></div>
+							<Divider />
+							<div className="detailContent"><h2>年级:  {this.props.location.data.describe}</h2></div>
+							<Divider />
+							<div className="detailContent"><h2>人数:</h2></div>
+							<Divider />
+							<div className="detailContent"><h2>时长:</h2></div>
+							<Divider />
+						</div>
+					    <Link to='./Media'><Button type="primary" size="large" id="study">开始学习</Button></Link>
 					</div>
 					<div className="Introduction">
 						<div className="classIntroduction">
 							<h2>介绍</h2>
 							<Divider />
+							<h4>{ this.props.location.data.describe }</h4>
 						</div>
 						<div className="teacher">
 							<h2>授课教师</h2>

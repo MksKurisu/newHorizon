@@ -13,6 +13,7 @@ const TabPane = Tabs.TabPane;
 class HomePage extends Component {
 	state = {
     current: 'index',
+    title: ''
   }
 	
 	handleClick = (e) => {
@@ -62,20 +63,20 @@ class HomePage extends Component {
 		        width={200} 
 		        style={{ background: '#fff' }}>
 			        <Menu onClick={this.handleClick} style={{ width: 200 }} mode="vertical" className="verticalContainer">
-					    <SubMenu key="sub1" title={<span><Icon type="mail" className="verticalContain" /><span>Navigation One</span></span>}>
+					    <SubMenu key="sub1" title={<span><span>Navigation One</span></span>}>
 					      	<Menu.Item key="1"><Link to='/classfication'>Option 1</Link></Menu.Item>
-					        <Menu.Item key="2">Option 2</Menu.Item>
-					        <Menu.Item key="3">Option 3</Menu.Item>
+					        <Menu.Item key="2"><Link to='/classfication'>Option 2</Link></Menu.Item>
+					        <Menu.Item key="3"><Link to='/classfication'>Option 3</Link></Menu.Item>
 					    </SubMenu>
-					    <SubMenu key="sub2" title={<span><Icon type="appstore" className="verticalContain" /><span>Navigation Two</span></span>}>
-					      <Menu.Item key="4">Option 4</Menu.Item>
-					      <Menu.Item key="5">Option 5</Menu.Item>
-					      <Menu.Item key="6">Option 6</Menu.Item>
+					    <SubMenu key="sub2" title={<span><span>Navigation Two</span></span>}>
+					      <Menu.Item key="4"><Link to='/classfication'>Option 4</Link></Menu.Item>
+					      <Menu.Item key="5"><Link to='/classfication'>Option 5</Link></Menu.Item>
+					      <Menu.Item key="6"><Link to='/classfication'>Option 6</Link></Menu.Item>
 					    </SubMenu>
-					    <SubMenu key="sub4" title={<span><Icon type="setting" className="verticalContain" /><span>Navigation Three</span></span>}>
-					      <Menu.Item key="7">Option 7</Menu.Item>
-					      <Menu.Item key="8">Option 8</Menu.Item>
-					      <Menu.Item key="9">Option 9</Menu.Item>
+					    <SubMenu key="sub4" title={<span><span>Navigation Three</span></span>}>
+					      <Menu.Item key="7"><Link to='/classfication'>Option 7</Link></Menu.Item>
+					      <Menu.Item key="8"><Link to='/classfication'>Option 8</Link></Menu.Item>
+					      <Menu.Item key="9"><Link to='/classfication'>Option 9</Link></Menu.Item>
 					    </SubMenu>
 					</Menu>
 		        </Sider>

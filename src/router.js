@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect, History } from 'react-router-dom';
 import HomePage from './HomePage';
 import Classfication from './Classfication';
 import classDetail from'./ClassDetail'
