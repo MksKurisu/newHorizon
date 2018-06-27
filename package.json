@@ -8,7 +8,8 @@
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "video-react": "^0.10.9"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -19,5 +20,7 @@
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
     "react-app-rewired": "^1.5.2"
-  }
+  },
+  "proxy":"http://47.106.72.161:10000"
 }
+
