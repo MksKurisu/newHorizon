@@ -38,6 +38,15 @@
 	line-height: 100px;
 }
 
+.carousel{
+	border-right: solid 2px white;
+	text-align: center;
+  height: 400px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
 .shopper{
 	box-sizing: border-box;
 	margin:0 0 6px 80px;

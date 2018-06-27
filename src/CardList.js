@@ -25,7 +25,6 @@ class CardList extends React.Component {
 	              	price:v.pirce
 	              }}}><Card
 	                bordered={false}
-	                hoverable
 	              	style={{width:250}}>
 	                <div className="card-header">
 	                  <img src={v.img} alt=""/>

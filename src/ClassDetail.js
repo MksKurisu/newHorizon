@@ -65,13 +65,13 @@ class classDetail extends Component {
 						<img alt="pic loading error" src={this.props.location.data.image} id="classPic" />
 						<div id="detailList">
 							<div className="detailContent"><h2>价格:  {this.props.location.data.price}</h2></div>
-							<Divider />
+							<Divider className="divider"/>
 							<div className="detailContent"><h2>年级:  {this.props.location.data.describe}</h2></div>
-							<Divider />
+							<Divider className="divider"/>
 							<div className="detailContent"><h2>人数:</h2></div>
-							<Divider />
+							<Divider className="divider"/>
 							<div className="detailContent"><h2>时长:</h2></div>
-							<Divider />
+							<Divider className="divider"/>
 						</div>
 					    <Link to='./Media'><Button type="primary" size="large" id="study">开始学习</Button></Link>
 					</div>
@@ -101,7 +101,7 @@ class classDetail extends Component {
 						</div>
 						<div className="catalogue">
 							<h2>目录</h2>
-							<Divider />
+							<Divider/>
 							<Steps direction="vertical" size="large" current={0}>
 							    <Step title="Introduction" description="This is a description." />
 							    <Step title="第一章" description="This is a description." />
@@ -111,7 +111,7 @@ class classDetail extends Component {
 						</div>
 						<div className="teacherInfo">
 							<h2>教师介绍</h2>
-							<Divider />
+							<Divider/>
 						</div>
 					</div>
 				</Content>
