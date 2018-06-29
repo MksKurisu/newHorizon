@@ -1,14 +1,14 @@
 import React from 'react';
 import {List, Card} from 'antd';
 import { Link } from 'react-router-dom';
-import './CardList.css'
+import './ClassCard.css'
 
-class CardList extends React.Component {
+class ClassCard extends React.Component {
   render(){
     const { imagecard } = this.props
     return(
         <List
-          className="cardList"
+          className="cardList1"
           rowKey="id"
           grid={{gutter:32,lg:5,md:5,sm:3,xs:2}}
           dataSource={[...imagecard]}
@@ -47,4 +47,4 @@ class CardList extends React.Component {
   }
 }
 
-export default CardList
+export default ClassCard

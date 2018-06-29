@@ -6,6 +6,10 @@ const queryLessons = () => axios.get('/v1/lessons')
   .then(response => response.data)
   .catch(error => console.log(error));
   
+const queryDetails = (lesson_id) => axios.get('/v1/lessons',{parmas:{id:lesson_id}})
+	.then(response => response.data)
+  .catch(error => console.log(error));
+  
 const queryTeachers = () => axios.get('/v1/teachers')
   .then(response => response.data)
   .catch(error => console.log(error));

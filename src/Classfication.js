@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Layout, Menu, Icon, Input, Button, List, Row, Col, Checkbox, Card} from 'antd';
 import { Link } from 'react-router-dom';
 import { queryLessons } from './server'
-import CardList from './CardList'
-import './CardList.css';
+import ClassCard from './ClassCard'
+import './ClassCard.css';
 import './Classfication.css'
 import './HomePage.css'
 const { Header, Content, Sider, } = Layout;
@@ -41,38 +41,43 @@ class Classfication extends Component {
 
   render() {
     return (
-    	<Layout>
-    		<Header className="headerContainer">
-    		  <Link to='./home'><div className="logo" /></Link>
-		      <Menu
-		        onClick={this.handleClick}
-		        mode="horizontal"
-		        style={{lineHeight:'64px'}}
-		      	theme="dark">
-		      	<Menu.Item key="index">
-		          <Link to='/home'><Icon type="compass" />首页</Link>
-		        </Menu.Item>
-		        <Menu.Item key="question">
-		          <Icon type="smile-o" />问答
-		        </Menu.Item>
-		        <Menu.Item key="judge">
-		          <Icon type="edit" />评测
-		        </Menu.Item>
-		        <Menu.Item key="downloading">
-		          <Icon type="download" />下载中心
-		        </Menu.Item>
-		        <Menu.Item key="aboutUs">
-		          <Icon type="search" />关于我们
-		        </Menu.Item>
-		        <Search placeholder="input search text" enterButton className="searcher"/>
-		        <div className="shopper"><Link to='/Shop'><Button type="primary" className="shopperContainer" shape="circle" >购物车</Button></Link></div>
-		        <div className="alarm"><Button  shape="circle" className="alarmContainer" type="primary"><Icon type="notification" style={{fontSize:26}} /></Button></div>
-		      </Menu>
+    	<Layout className="father">
+    		<Header className="headerContainer" style={{height:'64px'}}>
+			      <Menu
+			        onClick={this.handleClick}
+			        selectedKeys={[this.state.current]}
+			        mode="horizontal"
+			        style={{lineHeight:'64px'}}
+			      	theme="dark"
+			      	className="headerMenu">
+			      	<div className="login">
+			      		请<a>登录</a>,或<a>注册</a>
+			      	</div>
+			      	<Menu.Item key="index" className="index">
+			          <Link to='/home'><Icon type="compass" />首页</Link>
+			        </Menu.Item>
+			        <Menu.Item key="question">
+			          <Icon type="smile-o" />问答
+			        </Menu.Item>
+			        <Menu.Item key="judge">
+			          <Icon type="edit" />评测
+			        </Menu.Item>
+			        <Menu.Item key="downloading">
+			          <Icon type="download" />下载中心
+			        </Menu.Item>
+			        <Menu.Item key="aboutUs">
+			          <Icon type="search" />关于我们
+			        </Menu.Item>
+			        <div className="shop">
+			        	<Icon type="shopping-cart" id="shopIcon"/>
+			        	<div id="shopText">购物车</div>
+			        </div>
+			      </Menu>
 		    </Header>
 		    <Content className="listContent">
 		    	<div className="classList">
 		    		<div className="listHeader">
-		    			<h2 id="title">课程列表</h2>
+		    			<h2 id="classTitle">课程列表</h2>
 		    			<div className="buttonGroup">
 		    				<ButtonGroup>
 		    					<Button>查看公开课</Button>
@@ -106,7 +111,8 @@ class Classfication extends Component {
 		    		<Checkbox className="checkBox">免费课程</Checkbox>
 		    	</div>
 		    	<div className="classCard">
-					<CardList imagecard = {this.state.lessons} />		
+					<ClassCard imagecard = {this.state.lessons} />
+					<ClassCard imagecard = {this.state.lessons} />
 		    	</div>
 		    </Content>
 		</Layout>

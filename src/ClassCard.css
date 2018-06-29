@@ -93,9 +93,11 @@
   padding: 0 0 5px 0;
 }
 
-.cardList{
-	width: 1040px;
-	height: 449px;
+.cardList1{
+	margin-left: 50px;
+	margin-top: 30px;
+	width: 1400px;
+	height: 240px;
 	box-sizing: border-box;
 }
 

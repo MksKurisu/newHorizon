@@ -10,7 +10,7 @@
 	margin: auto;
 	background: white;
 }
-#title{
+#classTitle{
 	float: left;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .classCard{
-	width: 1660px;
+	width: 1400px;
 	height: 500px;
 	margin: auto;
 }
